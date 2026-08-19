@@ -1,0 +1,1039 @@
+/* =========================================
+   ARBAB CREATION
+   LUXURY JEWELLERY WEBSITE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 85px;
+    background: #090909;
+    border-bottom: 1px solid #252525;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.logo-sub {
+    color: #b9975b;
+    font-size: 9px;
+    letter-spacing: 6px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar a {
+    color: #ddd;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #b9975b;
+}
+
+
+/* HEADER ICONS */
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.header-icons span {
+    font-size: 10px;
+    background: #9d111c;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.96);
+
+    z-index: 3000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.search-overlay.active {
+    display: flex;
+}
+
+.close-search {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+
+    color: white;
+    background: transparent;
+    border: none;
+
+    font-size: 40px;
+}
+
+.search-box {
+    width: 60%;
+    border-bottom: 1px solid #b9975b;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    width: 100%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 30px;
+
+    padding: 20px;
+}
+
+.search-box span {
+    font-size: 30px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.92) 0%,
+            rgba(0,0,0,.65) 45%,
+            rgba(0,0,0,.2) 100%
+        ),
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=90")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #b9975b;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: .9;
+    font-weight: 500;
+}
+
+.hero h1 span {
+    color: #a81924;
+}
+
+.hero-text {
+    color: #ccc;
+    margin: 30px 0;
+    max-width: 480px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.primary-btn {
+    background: #9d111c;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #c01825;
+    transform: translateY(-2px);
+}
+
+.outline-btn {
+    border: 1px solid #b9975b;
+    color: #b9975b;
+}
+
+.outline-btn:hover {
+    background: #b9975b;
+    color: #090909;
+}
+
+
+/* =========================================
+   ADVERTISEMENT
+========================================= */
+
+.advertisement {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(90,0,8,.96),
+            rgba(20,0,0,.85)
+        );
+
+    padding: 55px 8%;
+
+    text-align: center;
+
+    border-top: 1px solid #551015;
+    border-bottom: 1px solid #551015;
+}
+
+.ad-small {
+    color: #b9975b;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.advertisement h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    margin: 8px 0;
+}
+
+.advertisement p {
+    color: #ddd;
+}
+
+.ad-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #b9975b;
+    color: #111;
+
+    padding: 13px 30px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    color: #b9975b;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.section-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    border: 1px solid #282828;
+    padding: 50px 25px;
+    text-align: center;
+
+    transition: .4s;
+}
+
+.category-card:hover {
+    border-color: #9d111c;
+    transform: translateY(-7px);
+    background: #100607;
+}
+
+.category-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.category-card p {
+    color: #888;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   SHOP
+========================================= */
+
+.shop {
+    background: #0d0d0d;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    background: transparent;
+    border: 1px solid #333;
+    color: #bbb;
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.filter.active,
+.filter:hover {
+    background: #9d111c;
+    border-color: #9d111c;
+    color: white;
+}
+
+
+/* PRODUCTS */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #111;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+}
+
+.product-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: #9d111c;
+    padding: 6px 10px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.badge.sale {
+    background: #b9975b;
+    color: #111;
+}
+
+.heart {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.7);
+    color: white;
+
+    font-size: 22px;
+}
+
+.heart.active {
+    color: #d21928;
+}
+
+.quick-add {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transform: translateY(100%);
+    transition: .4s;
+}
+
+.product-card:hover .quick-add {
+    transform: translateY(0);
+}
+
+.quick-add button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    background: #9d111c;
+    color: white;
+
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-category {
+    color: #b9975b;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.product-info h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.rating {
+    color: #b9975b;
+    font-size: 12px;
+}
+
+.price {
+    margin-top: 7px;
+    font-weight: 500;
+}
+
+.price del {
+    color: #666;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+
+/* =========================================
+   PROMOTION
+========================================= */
+
+.promotion {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.25)
+        ),
+        url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.promotion-content {
+    max-width: 550px;
+}
+
+.promotion-content p {
+    color: #b9975b;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.promotion h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 65px;
+    line-height: 1;
+    margin: 20px 0 30px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.about-content h2 span {
+    color: #9d111c;
+}
+
+.about-content > p:not(.small-title) {
+    color: #999;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.newsletter {
+    background: #160609;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.newsletter h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    margin: 5px 0;
+}
+
+.newsletter p {
+    color: #aaa;
+}
+
+.newsletter form {
+    display: flex;
+    width: 480px;
+}
+
+.newsletter input {
+    flex: 1;
+
+    background: #090909;
+    border: 1px solid #333;
+
+    padding: 16px;
+
+    color: white;
+    outline: none;
+}
+
+.newsletter button {
+    background: #9d111c;
+    border: none;
+
+    color: white;
+
+    padding: 0 25px;
+
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.contact-grid div {
+    padding: 35px;
+    border: 1px solid #292929;
+}
+
+.contact-grid span {
+    font-size: 30px;
+    color: #b9975b;
+}
+
+.contact-grid h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    margin: 10px;
+}
+
+.contact-grid p {
+    color: #888;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 45px 8%;
+
+    background: #050505;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.footer-logo small {
+    color: #b9975b;
+    letter-spacing: 4px;
+}
+
+footer p {
+    color: #666;
+    font-size: 11px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials a {
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.7);
+
+    z-index: 2500;
+
+    display: none;
+
+    justify-content: flex-end;
+}
+
+.cart-overlay.active {
+    display: flex;
+}
+
+.cart {
+    width: 420px;
+    max-width: 100%;
+    height: 100%;
+
+    background: #101010;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #292929;
+
+    padding-bottom: 20px;
+}
+
+.cart-header h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+}
+
+.cart-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+}
+
+#cartItems {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.empty-cart {
+    color: #777;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #292929;
+
+    padding: 15px 0;
+}
+
+.cart-item h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.cart-item p {
+    color: #b9975b;
+    margin-top: 5px;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #999;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #333;
+
+    padding: 20px 0;
+
+    font-size: 18px;
+}
+
+.cart-total strong {
+    color: #b9975b;
+}
+
+.checkout-btn {
+    width: 100%;
+
+    background: #9d111c;
+    border: none;
+
+    color: white;
+
+    padding: 17px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+
+        background: #090909;
+
+        flex-direction: column;
+        padding: 25px;
+
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .header-icons {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding-left: 7%;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter form {
+        width: 100%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .logo-main {
+        font-size: 23px;
+    }
+
+    .header-icons button {
+        font-size: 17px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 30px 6%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 430px;
+    }
+
+    .section-heading h2 {
+        font-size: 45px;
+    }
+
+    .promotion h2 {
+        font-size: 52px;
+    }
+
+    .newsletter h2 {
+        font-size: 38px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter button {
+        padding: 15px;
+    }
+
+    .search-box {
+        width: 85%;
+    }
+
+    .search-box input {
+        font-size: 20px;
+    }
+}

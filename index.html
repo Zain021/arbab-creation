@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arbab Creation | Luxury Jewellery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <span class="logo-main">ARBAB</span>
+        <span class="logo-sub">CREATION</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-icons">
+        <button onclick="openSearch()" aria-label="Search">⌕</button>
+        <button onclick="toggleWishlist()" aria-label="Wishlist">
+            ♡ <span id="wishlistCount">0</span>
+        </button>
+        <button onclick="openCart()" aria-label="Cart">
+            🛒 <span id="cartCount">0</span>
+        </button>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <button class="close-search" onclick="closeSearch()">×</button>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search jewellery..."
+            onkeyup="searchProducts()"
+        >
+        <span>⌕</span>
+    </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">THE ART OF ELEGANCE</p>
+
+        <h1>
+            Jewellery That<br>
+            <span>Defines You</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover timeless pieces designed to make
+            every moment unforgettable.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#shop" class="btn primary-btn">SHOP COLLECTION</a>
+            <a href="#collections" class="btn outline-btn">EXPLORE MORE</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ADVERTISEMENT ================= -->
+
+<section class="advertisement">
+
+    <div class="ad-content">
+
+        <p class="ad-small">EXCLUSIVE OFFER</p>
+
+        <h2>Luxury Jewellery Sale</h2>
+
+        <p>
+            Enjoy up to <strong>30% OFF</strong> selected jewellery.
+        </p>
+
+        <a href="#shop" class="ad-btn">SHOP NOW</a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories" id="collections">
+
+    <div class="section-heading">
+        <p>DISCOVER</p>
+        <h2>Our Collections</h2>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card" onclick="filterCategory('Rings')">
+            <div class="category-icon">💍</div>
+            <h3>Rings</h3>
+            <p>Elegant rings for every occasion</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Necklaces')">
+            <div class="category-icon">📿</div>
+            <h3>Necklaces</h3>
+            <p>Graceful pieces that shine</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Earrings')">
+            <div class="category-icon">✨</div>
+            <h3>Earrings</h3>
+            <p>Perfect finishing touches</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Bracelets')">
+            <div class="category-icon">⌁</div>
+            <h3>Bracelets</h3>
+            <p>Designed for effortless elegance</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop" id="shop">
+
+    <div class="section-heading">
+        <p>SHOP WITH US</p>
+        <h2>Featured Jewellery</h2>
+    </div>
+
+    <div class="filter-buttons">
+
+        <button class="filter active" onclick="filterCategory('All')">
+            All
+        </button>
+
+        <button class="filter" onclick="filterCategory('Rings')">
+            Rings
+        </button>
+
+        <button class="filter" onclick="filterCategory('Necklaces')">
+            Necklaces
+        </button>
+
+        <button class="filter" onclick="filterCategory('Earrings')">
+            Earrings
+        </button>
+
+        <button class="filter" onclick="filterCategory('Bracelets')">
+            Bracelets
+        </button>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+        <!-- Product 1 -->
+
+        <div class="product-card" data-category="Rings">
+
+            <div class="product-image">
+                <img
+                    src="images/ring1.jpg"
+                    alt="Ruby Ring"
+                >
+
+                <span class="badge">NEW</span>
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Royal Ruby Ring',129)">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">RINGS</p>
+
+                <h3>Royal Ruby Ring</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">RS 350.00</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 2 -->
+
+        <div class="product-card" data-category="Necklaces">
+
+            <div class="product-image">
+
+                <img
+                    src="images/necklace3.jpg"
+                    alt="Diamond Necklace"
+                >
+
+                <span class="badge">BESTSELLER</span>
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Diamond Grace Necklace',189)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">NECKLACES</p>
+
+                <h3>Diamond Grace Necklace</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">RS 500.00</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 3 -->
+
+        <div class="product-card" data-category="Earrings">
+
+            <div class="product-image">
+
+                <img
+                    src="images/earing1.jpg"
+                    alt="Golden Earrings"
+                >
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Golden Pearl Earrings',99)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">EARRINGS</p>
+
+                <h3>Golden Pearl Earrings</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">RS 500.00</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 4 -->
+
+        <div class="product-card" data-category="Bracelets">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Bracelet4.jpg"
+                    alt="Luxury Bracelet"
+                >
+
+                <span class="badge sale">SALE</span>
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Royal Gold Bracelet',149)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">BRACELETS</p>
+
+                <h3>Royal Gold Bracelet</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">
+                    RS 450.00
+                    <del>£199.00</del>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Product 5 -->
+
+        <div class="product-card" data-category="Bracelets">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Bracelet3.jpg"
+                    alt="Luxury Bracelet"
+                >
+
+                <span class="badge sale">SALE</span>
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Royal Gold Bracelet',149)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">BRACELETS</p>
+
+                <h3>Royal Gold Bracelet</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">
+                    RS 450.00
+                    <del>£199.00</del>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Product 6 -->
+
+        <div class="product-card" data-category="Rings">
+
+            <div class="product-image">
+
+                <img
+                    src="images/earing3.jpg"
+                    alt="Luxury Earring "
+                >
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Luxury Earring',159)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">EARRINGS</p>
+
+                <h3>Emerald Royal Ring</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">RS 500.00</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 7 -->
+
+        <div class="product-card" data-category="Necklaces">
+
+            <div class="product-image">
+
+                <img
+                    src="images/necklace1.jpg"
+                    alt="Pearl Necklace"
+                >
+
+                <button
+                    class="heart"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <div class="quick-add">
+                    <button onclick="addToCart('Classic Pearl Necklace',179)">
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">NECKLACES</p>
+
+                <h3>Classic Pearl Necklace</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <p class="price">RS 500.00</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROMOTION ================= -->
+
+<section class="promotion" id="offers">
+
+    <div class="promotion-content">
+
+        <p>MAKE IT MEMORABLE</p>
+
+        <h2>
+            Luxury Looks.<br>
+            Unforgettable Moments.
+        </h2>
+
+        <a href="#shop" class="btn primary-btn">
+            SHOP NOW
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1000&q=80"
+            alt="Arbab Creation Jewellery"
+        >
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="small-title">OUR STORY</p>
+
+        <h2>
+            Crafted With
+            <span>Passion</span>
+        </h2>
+
+        <p>
+            At Arbab Creation, we believe jewellery is more than
+            an accessory. It is a reflection of personality,
+            memories and timeless beauty.
+        </p>
+
+        <p>
+            Our collection brings together elegant designs and
+            sophisticated craftsmanship to create pieces that
+            you can treasure for years.
+        </p>
+
+        <a href="#contact" class="btn outline-btn">
+            DISCOVER OUR STORY
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <div>
+
+        <p>STAY IN THE LOOP</p>
+
+        <h2>
+            Join the Arbab Creation Family
+        </h2>
+
+        <p>
+            Get exclusive offers, new collection updates
+            and jewellery inspiration.
+        </p>
+
+    </div>
+
+    <form onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            SUBSCRIBE
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>Contact Us</h2>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <div>
+            <span>✉</span>
+            <h3>Email</h3>
+            <p>arbab.collection2026@gmail.com</p>
+        </div>
+
+        <div>
+            <span>☎</span>
+            <h3>Phone</h3>
+            <p></p>
+        </div>
+
+        <div>
+            <span>⌂</span>
+            <h3>Location</h3>
+            <p>PAKISTAN</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <span>ARBAB</span>
+        <small>CREATION</small>
+
+    </div>
+
+    <p>
+        © 2026 Arbab Creation. All Rights Reserved.
+    </p>
+
+    <div class="socials">
+
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button onclick="closeCart()">×</button>
+
+        </div>
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    £0.00
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                onclick="checkout()"
+            >
+                PROCEED TO CHECKOUT
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
